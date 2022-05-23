@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rikiuotchi/static/css/main.b4f09b47.css",
+    "main.js": "/rikiuotchi/static/js/main.aa433acc.js",
+    "static/js/787.229575f7.chunk.js": "/rikiuotchi/static/js/787.229575f7.chunk.js",
+    "index.html": "/rikiuotchi/index.html",
+    "main.b4f09b47.css.map": "/rikiuotchi/static/css/main.b4f09b47.css.map",
+    "main.aa433acc.js.map": "/rikiuotchi/static/js/main.aa433acc.js.map",
+    "787.229575f7.chunk.js.map": "/rikiuotchi/static/js/787.229575f7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4f09b47.css",
+    "static/js/main.aa433acc.js"
+  ]
+}
