@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 40px;
+}
+
+.section{
+    background-color: #373737;
+    color: #ccc;
+    font: 1em/1.5 sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.wheel_and_hamster{
+    position: relative;
+    height: 12em;
+    width: 12em;
+}
+
+.wheel, .hamster, .hamster div, .mid{
+    position: absolute;
+}
+
+.wheel, .mid{
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wheel{
+    background: radial-gradient(100% 100% at center, #8d6a42 0%, #8d6a42 47.8%, #785936 48%);
+    z-index: -2;
+}
+
+.hamster{
+    top: 50%;
+    left: calc(52.5% - 3.5em);
+    height: 3.75em;
+    width: 7em;
+    transform: rotate(4deg) translate(-0.8em, 1.85em);
+    transform-origin: 50% 0;
+    z-index: 1;
+    animation: hamster 1s ease-in-out infinite;
+}
+
+.head{
+    background: #ccc;
+    border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+    box-shadow: 0 -0.25em 0 #ddd inset, 0.75em -1.55em 0 #eee inset;
+    top: 0;
+    left: -1.9em;
+    height: 2.5em;
+    width: 2.5em;
+    transform-origin: 100% 50%;
+    animation: head 1s ease-in-out infinite;
+}
+
+.ear{
+    background: #fbb6b6;
+    border-radius: 50%;
+    box-shadow: -0.25em 0 #ccc inset;
+    top: -0.25em;
+    right: -0.25em;
+    width: 0.65em;
+    height: 0.65em;
+    transform-origin: 50% 75%;
+    animation: ear 1s ease-in-out infinite;
+}
+
+.eye{
+    background-color: #111;
+    border-radius: 50%;
+    top: 0.375em;
+    left: 1.25em;
+    height: 0.5em;
+    width: 0.5em;
+    animation: eye 3s linear infinite;
+}
+
+.nose{
+    background: #f98686;
+    border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+    top: 0.75em;
+    left: 0;
+    height: 0.25em;
+    width: 0.25em;
+}
+
+.body{
+    background: #eee;
+    border-radius: 50% 50% 50% 30% / 15% 60% 40% 50%;
+    box-shadow: 0.1em 0.75em 0 #ccc inset, 0.15em -0.5em 0 #ddd inset;
+    top: 0.25em;
+    left: 2em;
+    height: 3em;
+    width: 4.5em;
+    transform-origin: 17% 50%;
+    transform-style: preserve-3d;
+    animation: body 1s ease-in-out infinite;
+}
+
+.leg_front_right, .leg_front_left{
+    clip-path: polygon(0 0, 100% 0, 70% 80%, 60% 100%, 0 100%, 40% 80%);
+    top: 2em;
+    left: 0.5em;
+    height: 1.5em;
+    width: 1em;
+    transform-origin: 50% 0;
+}
+
+.leg_front_right{
+    background: linear-gradient(#ccc 80%, #f98686 80%);
+    transform: rotate(15deg) translateZ(-1px);
+    animation: fr 1s linear infinite;
+}
+
+.leg_front_left{
+    background: linear-gradient(#eee 80%, #fbb6b6 80%);
+    transform: rotate(15deg);
+    animation: fl 1s linear infinite;
+}
+
+.leg_back_right, .leg_back_left{
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 70% 90%, 70% 100%, 30% 100%, 40% 90%, 30% 0);
+    top: 1em;
+    left: 2.5em;
+    height: 2.5em;
+    width: 1.5em;
+    transform-origin: 50% 30%;
+    border-radius: 0.75em 0.75em 0 0;
+}
+
+.leg_back_right{
+    background: linear-gradient(#ccc 90%, #f98686 90%);
+    transform: rotate(-25deg) translateZ(-1px);
+    animation: br 1s linear infinite;
+}
+
+.leg_back_left{
+    background: linear-gradient(#eee 90%, #fbb6b6 90%);
+    transform: rotate(-25deg);
+    animation: bl 1s linear infinite;
+}
+
+.tail{
+    background: #eee;
+    border-radius: 0.25em 50% 50% 0.25em;
+    box-shadow: 0 -0.2em 0 #ddd inset;
+    top: 1.5em;
+    right: -0.5em;
+    height: 0.5em;
+    width: 1em;
+    transform: rotate(30deg) translateZ(-1px);
+    transform-origin: 0.25em 0.25em;
+    animation: tail 1s linear infinite;
+}
+
+.mid{
+    background: radial-gradient(100% 100% at center, #785936 4.8%, #9990 5%), linear-gradient(#87633900 46.9%, #876339 47% 52.9%, #87633900 53%) 50% 50% / 99% 99% no-repeat;
+    animation: mid 1s linear infinite;
+}
+
+@keyframes hamster {
+    0%, 100%{
+        transform: rotate(4deg) translate(-0.8em, 1.85em);
+    } 50% {
+        transform: rotate(0deg) translate(-0.8em, 1.85em);
+    }
+}
+
+@keyframes head {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(0);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes ear {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(0);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(12deg);
+    }
+}
+
+@keyframes eye {
+    0%, 97%, 100%{
+        transform: scaleY(1);
+    } 98.5% {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes body {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(0);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes fr {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(50deg) translateZ(-1px);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(-30deg) translateZ(-1px);
+    }
+}
+
+@keyframes fl {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(-30deg);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(50deg);
+    }
+}
+
+@keyframes br {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(-60deg) translateZ(-1px);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(20deg) translateZ(-1px);
+    }
+}
+
+@keyframes bl {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(20deg);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(-60deg);
+    }
+}
+
+@keyframes tail {
+    0%, 25%, 50%, 75%, 100%{
+        transform: rotate(30deg) translateZ(-1px);
+    } 12.5%, 37.5%, 62.5%, 87.5% {
+        transform: rotate(10deg) translateZ(-1px);
+    }
+}
+
+@keyframes mid {
+    0%{
+        transform: rotate(0);
+    } 100% {
+        transform: rotate(-1turn);
+    }
+}
+
+
+@media screen and (max-widt:680px) {
+    *{
+        width: 30%;
+    }
+}
