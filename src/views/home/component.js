@@ -1,5 +1,11 @@
+import Navbar from "../../components/navbar/component";
+
 export default function Home(props){
-    return <section>
-        Home
-    </section>
+    return <>
+        <Navbar/>
+        <section>
+            Home
+        </section>
+    </>
+    
 }
