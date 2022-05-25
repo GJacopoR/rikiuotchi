@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/rikiuotchi/static/css/main.d65ea83b.css",
-    "main.js": "/rikiuotchi/static/js/main.4d3a24c1.js",
+    "main.css": "/rikiuotchi/static/css/main.46c3e15a.css",
+    "main.js": "/rikiuotchi/static/js/main.9e00d1e8.js",
     "static/js/787.229575f7.chunk.js": "/rikiuotchi/static/js/787.229575f7.chunk.js",
+    "static/media/Frontier Village.jpeg": "/rikiuotchi/static/media/Frontier Village.959e52c55438f36e694b.jpeg",
     "index.html": "/rikiuotchi/index.html",
-    "main.d65ea83b.css.map": "/rikiuotchi/static/css/main.d65ea83b.css.map",
-    "main.4d3a24c1.js.map": "/rikiuotchi/static/js/main.4d3a24c1.js.map",
+    "main.46c3e15a.css.map": "/rikiuotchi/static/css/main.46c3e15a.css.map",
+    "main.9e00d1e8.js.map": "/rikiuotchi/static/js/main.9e00d1e8.js.map",
     "787.229575f7.chunk.js.map": "/rikiuotchi/static/js/787.229575f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d65ea83b.css",
-    "static/js/main.4d3a24c1.js"
+    "static/css/main.46c3e15a.css",
+    "static/js/main.9e00d1e8.js"
   ]
 }
