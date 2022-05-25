@@ -3,12 +3,10 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Landing from './views/landing/component';
 import Wheel from './views/wheel/component';
 import Home from './views/home/component';
-import Navbar from './components/navbar/component';
 
 function App() {
   return (
     <Router>
-      <div className="App">
         <main>
           <Routes>
             <Route
@@ -25,7 +23,6 @@ function App() {
             />
           </Routes>
         </main>
-      </div>
     </Router>
   );
 }

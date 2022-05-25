@@ -97,7 +97,7 @@
 
 .body{
     background: #eee;
-    border-radius: 50% 50% 50% 30% / 15% 60% 40% 50%;
+    border-radius: 50% 50% 50% 35% / 15% 60% 40% 50%;
     box-shadow: 0.1em 0.75em 0 #ccc inset, 0.15em -0.5em 0 #ddd inset;
     top: 0.25em;
     left: 2em;
@@ -257,9 +257,22 @@
     }
 }
 
+@media screen and (max-width:400px) {
+    .section{
+        -webkit-transform: scale(-0.75, 0.75);
+        -moz-transform: scale(-0.75, 0.75);
+        -o-transform: scale(-0.75, 0.75);
+        -ms-transform: scale(-0.75, 0.75);
+        transform: scale(-0.75, 0.75);
+    }
+}
 
-@media screen and (max-widt:680px) {
-    *{
-        width: 30%;
+@media screen and (max-width:375px) {
+    .section{
+        -webkit-transform: scale(-0.5, 0.5);
+        -moz-transform: scale(-0.5, 0.5);
+        -o-transform: scale(-0.5, 0.5);
+        -ms-transform: scale(-0.5, 0.5);
+        transform: scale(-0.5, 0.5);
     }
 }
